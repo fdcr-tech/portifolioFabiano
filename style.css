@@ -1,0 +1,195 @@
+/* --- Configuração Global e Fontes --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Cores Base */
+    --bg-dark: #0d0d0d;
+    --bg-light-dark: #1f1f1f;
+    
+    /* Cores de Texto */
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    
+    /* Cor de Destaque (Accent - Azul Tecnológico) */
+    --accent-color: #007bff;
+    --accent-hover: #4e91ff;
+    --accent-shadow: rgba(0, 123, 255, 0.6);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* --- Estrutura --- */
+.section-darker {
+    background-color: var(--bg-light-dark);
+}
+
+section {
+    padding: 6rem 0;
+}
+
+/* --- NAVBAR (Glassmorphism Aprimorado) --- */
+.navbar-glass {
+    background: rgba(13, 13, 13, 0.8); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-hover) !important;
+    text-shadow: 0 0 5px var(--accent-shadow);
+}
+
+/* --- SEÇÃO HERO --- */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(13, 13, 13, 0.85), var(--bg-dark) 100%), url('imagens/1348667.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 40px var(--accent-shadow), inset 0 0 10px rgba(0, 0, 0, 0.8); 
+}
+
+/* --- Botões de Ação --- */
+.btn-primary {
+    box-shadow: 0 4px 15px var(--accent-shadow); 
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+    box-shadow: 0 0 20px var(--accent-shadow);
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    color: var(--text-primary) !important;
+    border-color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    color: var(--bg-dark) !important; 
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+    box-shadow: 0 0 15px var(--accent-shadow);
+}
+
+
+/* --- Efeito Máquina de Escrever --- */
+.typewriter-text {
+    color: var(--accent-color);
+    font-weight: 700; 
+    border-right: 3px solid var(--accent-color);
+    animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+    from { border-right-color: var(--accent-color); }
+    to { border-right-color: transparent; }
+}
+
+/* --- CARDS DE PROJETO (Glassmorphism Focado) --- */
+.project-card {
+    background: rgba(40, 40, 40, 0.3); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px var(--accent-shadow); 
+}
+
+.project-card .card-tags {
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+/* --- TAGS DE HABILIDADE --- */
+#skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background-color: var(--bg-light-dark);
+    color: var(--text-primary);
+    padding: 0.8rem 1.7rem;
+    border-radius: 30px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.skill-tag:hover {
+    background-color: var(--accent-color); 
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--accent-shadow);
+}
+
+/* --- Rodapé e Social --- */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-social {
+    color: var(--text-secondary);
+    font-size: 2.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btn-social:hover {
+    color: var(--accent-hover);
+    text-shadow: 0 0 15px var(--accent-shadow); 
+}
+
+/* --- Animação de Fade-in no Scroll --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
