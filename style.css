@@ -193,3 +193,19 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+.btn-certificado-azul {
+    background-color: #1E90FF; /* azul suave */
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-certificado-azul:hover {
+    background-color: #3AA0FF; /* azul um pouco mais claro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px #1E90FF;
+}
