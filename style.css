@@ -194,8 +194,8 @@ footer {
     transform: translateY(0);
 }
 
-.btn-certificado-azul {
-    background-color: #1E90FF; /* azul suave */
+.btn-certificado {
+    background-color: #1E90FF; /* ou outra cor escolhida */
     color: #fff;
     border-radius: 8px;
     padding: 10px 20px;
@@ -204,8 +204,8 @@ footer {
     transition: all 0.3s ease;
 }
 
-.btn-certificado-azul:hover {
-    background-color: #3AA0FF; /* azul um pouco mais claro no hover */
+.btn-certificado:hover {
+    background-color: #3AA0FF; /* hover */
     transform: translateY(-2px);
     box-shadow: 0 0 12px #1E90FF;
 }
